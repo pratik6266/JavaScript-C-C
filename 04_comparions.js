@@ -28,4 +28,4 @@ function fun(){ // created a function
   console.log("Hello"); 
 }
 
-fun(); // calling the function  
+fun(); // calling the function
