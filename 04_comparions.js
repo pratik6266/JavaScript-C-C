@@ -1,0 +1,2 @@
+console.log("2" == 2); // true because == convert the data type thatswhy it is inconsistent for diff data types
+console.log("2" === 2); // where as === don't changes the data type first ti checks the data types and then the data
