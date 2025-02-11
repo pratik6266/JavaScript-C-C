@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit and remove element in DOM</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <ul class="language">
+    <li>JavaScript</li>
+    <li>C plus plus</li>
+    <li>Python</li>
+    <li>Ruby</li>
+  </ul>
+</body>
+<script>
+  //add
+  function addlan (langname){
+    const parent = document.querySelector('.language');
+    const newli = document.createElement('li');
+    //newli.innerHTML = langname;
+    newli.appendChild(document.createTextNode(langname)); //! this is more optimal
+    parent.appendChild(newli);
+  }
+  addlan("Java");
+  addlan("Swift");
+  addlan("Golang");
+  addlan("Rust");
+  addlan("C");
+
+  //edit
+  const parent = document.querySelector('.language');
+  //parent.firstElementChild.innerHTML = "TypeScript"; // lower are more optimal  
+  const newli = document.createElement('li');
+  newli.appendChild(document.createTextNode('Mojo'));
+  parent.firstElementChild.replaceWith(newli);
+
+  //delete
+  const last = parent.lastElementChild;
+  last.remove(); // easy remove 
+</script>
+</html>
