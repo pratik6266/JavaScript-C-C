@@ -1,0 +1,21 @@
+body{
+  color: white;
+  background-color: black;
+}
+.container{
+  margin-top: 200px;
+  text-align: center;
+}
+.time{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.clock{
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 200px;
+}
