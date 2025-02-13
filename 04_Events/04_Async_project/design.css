@@ -1,0 +1,14 @@
+body{
+  color: white;
+  background-color: black;
+  font-family: 'Times New Roman', Times, serif;
+  height: 100vh;
+}
+#insert{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit;
+  height: 100%;
+}
