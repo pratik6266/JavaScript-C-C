@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Request</title>
+  <style>
+    body{
+      color: white;
+      background-color: black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .name{
+      border: 10px white solid;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+</body>
+<script>
+  let data;
+  const RequestUrl = 'https://api.github.com/users/pratik6266';
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', RequestUrl);
+  xhr.onreadystatechange = (() => {
+    if(xhr.readyState === 4 && xhr.status === 200){
+      data = JSON.parse(xhr.responseText);
+      console.log(data);
+      let photo = (data.avatar_url);
+      let userId = (data.login);
+      let content = document.getElementById('content'); 
+      content.innerHTML = `
+        <div>UserID: ${userId}</div>
+        <div>
+          <img src="https://avatars.githubusercontent.com/u/121403718?v=4" alt="A beautiful flower" class="name" width="200" height="200">
+        </div>
+      `
+    }
+  });
+  xhr.send(); 
+</script>
+</html>
